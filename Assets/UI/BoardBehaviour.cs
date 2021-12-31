@@ -46,7 +46,10 @@ public class BoardBehaviour : MonoBehaviour
 
         _path.ForEach(Destroy);
         _path = new List<GameObject>();
-        path.ToList().ForEach(CreateLine);
+        if (path != null)
+        {
+            path.ToList().ForEach(CreateLine);
+        }
     }
 
     void CreateLine(Tile tile)
@@ -114,7 +117,7 @@ public class BoardBehaviour : MonoBehaviour
         var visualPiece = (GameObject)Instantiate(Piece);
         visualPiece.transform.position = GetWorldCoordinates(piece.X, piece.Y, 1f);
         var mat = new Material(Shader.Find(" Glossy")) {color = colour};
-        visualPiece.renderer.material = mat;
+        visualPiece.GetComponent<Renderer>().material = mat;
 
         var pb = (PieceBehaviour)visualPiece.GetComponent("PieceBehaviour");
 

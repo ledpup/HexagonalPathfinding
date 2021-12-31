@@ -14,7 +14,7 @@ public class TileBehaviour : MonoBehaviour
 
         mat.color = Tile.CanPass ? Color.green : mat.color = Color.black;
         
-        this.renderer.material = mat;
+        this.GetComponent<Renderer>().material = mat;
     }
 
     void Start()

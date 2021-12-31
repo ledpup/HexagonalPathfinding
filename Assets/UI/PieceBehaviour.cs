@@ -20,7 +20,7 @@ public class PieceBehaviour : MonoBehaviour
 
     void OnMouseUp()
     {
-        Debug.Log(string.Format("{0} selected", this.renderer.material.color.ToString()));
+        Debug.Log(string.Format("{0} selected", this.GetComponent<Renderer>().material.color.ToString()));
 
         Messenger<PieceBehaviour>.Broadcast("Piece selected", this);
 
