@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 39137397}
   - component: {fileID: 39137396}
   - component: {fileID: 39137399}
+  - component: {fileID: 39137400}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -159,8 +160,8 @@ Camera:
   m_GameObject: {fileID: 39137395}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.17915626, g: 0.6226415, b: 0.60137814, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -225,6 +226,68 @@ MonoBehaviour:
   SelectionObject: {fileID: 100000, guid: fda287340ffdcb148a28df9608ad021b, type: 3}
   Width: 8
   Height: 8
+--- !u!114 &39137400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39137395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17ca2f2379fe05d498cb0a9c01d839f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yaw:
+    activate: 0
+    keyboardAxis: 0
+    modifiers:
+      leftAlt: 1
+      leftControl: 0
+      leftShift: 0
+    sensitivity: 1
+  pitch:
+    activate: 0
+    keyboardAxis: 1
+    modifiers:
+      leftAlt: 1
+      leftControl: 0
+      leftShift: 0
+    sensitivity: 1
+  roll:
+    activate: 0
+    keyboardAxis: 0
+    modifiers:
+      leftAlt: 1
+      leftControl: 1
+      leftShift: 0
+    sensitivity: 1
+  verticalTranslation:
+    activate: 1
+    keyboardAxis: 1
+    modifiers:
+      leftAlt: 0
+      leftControl: 0
+      leftShift: 0
+    sensitivity: 0.5
+  horizontalTranslation:
+    activate: 1
+    keyboardAxis: 0
+    modifiers:
+      leftAlt: 0
+      leftControl: 0
+      leftShift: 0
+    sensitivity: 0.5
+  depthTranslation:
+    activate: 0
+    keyboardAxis: 1
+    modifiers:
+      leftAlt: 0
+      leftControl: 1
+      leftShift: 0
+    sensitivity: 0.5
+  keyboardHorizontalAxisName: Horizontal
+  keyboardVerticalAxisName: Vertical
 --- !u!1 &192462965
 GameObject:
   m_ObjectHideFlags: 0

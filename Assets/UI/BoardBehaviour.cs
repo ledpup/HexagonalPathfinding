@@ -55,7 +55,7 @@ public class BoardBehaviour : MonoBehaviour
     void CreateLine(Tile tile)
     {
         var line = (GameObject)Instantiate(Line);
-        line.transform.position = GetWorldCoordinates(tile.Location.X, tile.Location.Y, 1f);
+        line.transform.position = GetWorldCoordinates(tile.Location.X, tile.Location.Y, .375f);
         _path.Add(line);
     }
 
@@ -115,7 +115,7 @@ public class BoardBehaviour : MonoBehaviour
     private GameObject CreatePiece(GamePiece piece, Color colour)
     {
         var visualPiece = (GameObject)Instantiate(Piece);
-        visualPiece.transform.position = GetWorldCoordinates(piece.X, piece.Y, 1f);
+        visualPiece.transform.position = GetWorldCoordinates(piece.X, piece.Y, .7f);
         var mat = new Material(Shader.Find(" Glossy")) {color = colour};
         visualPiece.GetComponent<Renderer>().material = mat;
 
